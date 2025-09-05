@@ -1,16 +1,25 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:http/http.dart' as http;
 import '../models/run.dart';
 import '../models/course.dart';
 
 class ApiService {
   static final ApiService instance = ApiService._init();
-  static const String baseUrl = 'http://localhost:3000/api';
+  static String? _overrideHost;
+  static String get _defaultHost => Platform.isAndroid ? 'http://10.0.2.2:3000' : 'http://127.0.0.1:3000';
+  static String get _host => _overrideHost ?? _defaultHost;
+  static String get baseUrl => '$_host/api';
 
   ApiService._init();
 
   void init() {
     // Initialize API service
+  }
+
+  // Optional: allow overriding the host (e.g., when using a physical device)
+  void setHost(String hostWithSchemeAndPort) {
+    _overrideHost = hostWithSchemeAndPort.trim().replaceAll(RegExp(r"/+$"), '');
   }
 
   Future<Map<String, dynamic>> validateRun(Run run) async {
