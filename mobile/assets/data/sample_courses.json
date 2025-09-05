@@ -1,0 +1,80 @@
+[
+  {
+    "id": "alphabet_basics",
+    "title": "Alphabet Basics",
+    "description": "Learn to trace basic letters",
+    "icon": "🔤",
+    "requiredXP": 0,
+    "exercises": [
+      {
+        "id": "trace_a",
+        "type": "trace",
+        "title": "Trace Letter A",
+        "description": "Draw the letter A on the canvas",
+        "data": {"letter": "A"},
+        "baseXP": 10
+      },
+      {
+        "id": "trace_b",
+        "type": "trace",
+        "title": "Trace Letter B",
+        "description": "Draw the letter B on the canvas",
+        "data": {"letter": "B"},
+        "baseXP": 15
+      },
+      {
+        "id": "trace_c",
+        "type": "trace",
+        "title": "Trace Letter C",
+        "description": "Draw the letter C on the canvas",
+        "data": {"letter": "C"},
+        "baseXP": 12
+      }
+    ],
+    "unlocked": true
+  },
+  {
+    "id": "counting_fun",
+    "title": "Counting Fun",
+    "description": "Practice counting objects",
+    "icon": "🔢",
+    "requiredXP": 50,
+    "exercises": [
+      {
+        "id": "count_apples",
+        "type": "count",
+        "title": "Count Apples",
+        "description": "How many apples do you see?",
+        "data": {"imageId": "apples"},
+        "baseXP": 20
+      },
+      {
+        "id": "count_balls",
+        "type": "count",
+        "title": "Count Balls",
+        "description": "How many balls do you see?",
+        "data": {"imageId": "balls"},
+        "baseXP": 25
+      }
+    ],
+    "unlocked": false
+  },
+  {
+    "id": "rhythm_master",
+    "title": "Rhythm Master",
+    "description": "Tap along with the beat",
+    "icon": "🎵",
+    "requiredXP": 100,
+    "exercises": [
+      {
+        "id": "rhythm_basic",
+        "type": "rhythm",
+        "title": "Basic Rhythm",
+        "description": "Tap along with the basic beat",
+        "data": {"bpm": 120, "pattern": [0, 500, 1000, 1500]},
+        "baseXP": 25
+      }
+    ],
+    "unlocked": false
+  }
+]
